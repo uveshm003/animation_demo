@@ -28,11 +28,21 @@ class _LoginScreenAnimationState extends State<LoginScreenAnimation>
     formSlideAnimation = Tween<Offset>(
       begin: Offset(-1, -1),
       end: Offset(0, 0),
-    ).animate(animationController);
+    ).animate(
+      CurvedAnimation(
+        parent: animationController,
+        curve: Curves.ease,
+      ),
+    );
     formScaleAnimation = Tween<double>(
       begin: 0,
       end: 1,
-    ).animate(animationController);
+    ).animate(
+      CurvedAnimation(
+        parent: animationController,
+        curve: Curves.ease,
+      ),
+    );
     animationController.forward();
   }
 
