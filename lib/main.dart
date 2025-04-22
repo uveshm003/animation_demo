@@ -1,3 +1,5 @@
+import 'package:animation_demo/explicit_animation/list_animation.dart';
+import 'package:animation_demo/explicit_animation/login_screen_animation.dart';
 import 'package:animation_demo/implicit_animation/animated_color_palette.dart';
 import 'package:animation_demo/implicit_animation/animated_shopping_cart.dart';
 import 'package:animation_demo/implicit_animation/pulsating_circle_animation.dart';
@@ -80,6 +82,14 @@ List<NavigationModel> myAnimationPages = [
   NavigationModel(
     name: 'Pulsating Circle Animation',
     widget: PulsatingCircleAnimation(),
+  ),
+  NavigationModel(
+    name: 'Login Screen Animation',
+    widget: LoginScreenAnimation(),
+  ),
+  NavigationModel(
+    name: 'List Animation',
+    widget: ListAnimation(),
   ),
 ];
 
