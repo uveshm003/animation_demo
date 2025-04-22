@@ -19,7 +19,7 @@ class _LoginScreenAnimationState extends State<LoginScreenAnimation>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1500),
+      duration: Duration(seconds: 2),
     );
     logoFadeAnimation = Tween<double>(
       begin: 0,

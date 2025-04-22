@@ -18,12 +18,12 @@ class _ListAnimationState extends State<ListAnimation>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: Duration(seconds: 10),
     );
     offsetAnimationList = List.generate(
       itemCount,
       (index) => Tween<Offset>(
-        begin: Offset((0 - index).toDouble(), 0),
+        begin: Offset(-1, 0),
         end: Offset.zero,
       ).animate(
         CurvedAnimation(
@@ -53,7 +53,11 @@ class _ListAnimationState extends State<ListAnimation>
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          controller.forward();
+          if (controller.isCompleted) {
+            controller.reverse();
+          } else {
+            controller.forward();
+          }
         },
         child: Icon(
           Icons.done,
