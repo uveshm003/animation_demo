@@ -1,9 +1,11 @@
+import 'package:animation_demo/custom_painter/bouncing_ball_animation.dart';
 import 'package:animation_demo/explicit_animation/list_animation.dart';
 import 'package:animation_demo/explicit_animation/loading_animation.dart';
 import 'package:animation_demo/explicit_animation/login_screen_animation.dart';
 import 'package:animation_demo/implicit_animation/animated_color_palette.dart';
 import 'package:animation_demo/implicit_animation/animated_shopping_cart.dart';
 import 'package:animation_demo/implicit_animation/pulsating_circle_animation.dart';
+import 'package:animation_demo/page_route_animation/splash_animation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -95,6 +97,14 @@ List<NavigationModel> myAnimationPages = [
   NavigationModel(
     name: 'Loading Animation',
     widget: RadialLoadingAnimation(),
+  ),
+  NavigationModel(
+    name: 'Page Route Animation',
+    widget: SplashAnimation(),
+  ),
+  NavigationModel(
+    name: 'Bouncing Ball Animation',
+    widget: BouncingBallAnimation(),
   ),
 ];
 
